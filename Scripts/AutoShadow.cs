@@ -1,13 +1,14 @@
-﻿using UnityEngine;
+﻿// -*- tab-width: 4 -*-
+using UnityEngine;
 using System.Collections;
 
 public class AutoShadow : MonoBehaviour {
     
     void Awake()
     {
-	foreach (GameObject obj in GameObject.FindGameObjectsWithTag("shadow")) {
-	    obj.transform.rotation = transform.rotation;
-	}
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("shadow")) {
+            obj.transform.rotation = transform.rotation;
+        }
     }
 
 }

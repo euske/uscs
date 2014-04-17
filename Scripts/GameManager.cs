@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// -*- tab-width: 4 -*-
+using UnityEngine;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -8,23 +9,25 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	UpdateScore();
-	SpawnEnemy();
+        UpdateScore();
+        SpawnEnemy();
     }
     
     void ScoreEnemy () {
-	score++;
-	UpdateScore();
-	SpawnEnemy();
+        score++;
+        UpdateScore();
+        SpawnEnemy();
     }
 
     void UpdateScore()
     {
-	guiText.text = "Score: "+score;
+        guiText.text = "Score: "+score;
     }
 
     void SpawnEnemy () {
-	GameObject enemy = Instantiate(enemyPrefab, new Vector3(5, 10, 5), Quaternion.identity) as GameObject;
-	enemy.GetComponent<EnemyBehaviour>().manager = this;
+        Vector3 pos = new Vector3(5, 10, 5);
+        GameObject enemy = Instantiate(enemyPrefab, pos, 
+                                       Quaternion.identity) as GameObject;
+        enemy.GetComponent<EnemyBehaviour>().manager = this;
     }
 }

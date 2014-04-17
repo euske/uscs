@@ -1,3 +1,4 @@
+// -*- tab-width: 4 -*-
 using UnityEngine;
 using System.Collections;
 
@@ -11,8 +12,8 @@ public class MouseLookY : MonoBehaviour {
 
     void Update ()
     {
-	roty += Input.GetAxis("Mouse Y") * sensitivity;
-	roty = Mathf.Clamp(roty, minimum, maximum);
-	transform.localEulerAngles = new Vector3(-roty, transform.localEulerAngles.y, 0);
+        roty += Input.GetAxis("Mouse Y") * sensitivity;
+        roty = Mathf.Clamp(roty, minimum, maximum);
+        transform.localEulerAngles = new Vector3(-roty, transform.localEulerAngles.y, 0);
     }
 }

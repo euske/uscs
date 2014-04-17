@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// -*- tab-width: 4 -*-
+using UnityEngine;
 using System.Collections;
 
 public class Illusioner : MonoBehaviour {

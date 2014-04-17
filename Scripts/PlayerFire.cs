@@ -1,3 +1,4 @@
+// -*- tab-width: 4 -*-
 using UnityEngine;
 using System.Collections;
 
@@ -8,10 +9,10 @@ public class PlayerFire : MonoBehaviour
 
     void Update()
     {
-	if (Input.GetButtonDown("Fire1")) {
-	    Vector3 pos = transform.position + transform.forward;
-	    Instantiate(bulletPrefab, pos, transform.rotation);
-	    audio.PlayOneShot(firesound);
-	}
+        if (Input.GetButtonDown("Fire1")) {
+            Vector3 pos = transform.position + transform.forward;
+            Instantiate(bulletPrefab, pos, transform.rotation);
+            audio.PlayOneShot(firesound);
+        }
     }
 }
